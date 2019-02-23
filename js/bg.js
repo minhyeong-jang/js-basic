@@ -8,7 +8,6 @@ function setImage() {
   image.src = `images/${randomNumber}.jpg`;
   image.classList.add('bgImage');
   body.prepend(image);
-  console.log(image.clientWidth, image.clientHeight);
 }
 
 function init() {
