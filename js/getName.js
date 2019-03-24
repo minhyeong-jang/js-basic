@@ -1,10 +1,12 @@
-const question = document.querySelector(".question"),
+const question = document.querySelector(".js-question"),
   form = document.querySelector(".js-form"),
   input = form.querySelector("input"),
-  hello = document.querySelector(".js-hello");
+  hello = document.querySelector(".js-hello"),
+  clock = document.querySelector(".js-clock"),
+  toDoForm2 = document.querySelector(".js-toDoForm"),
+  toDoList2 = document.querySelector(".js-toDoList");
 
-const NAME_LS = "user-name",
-  SHOWING_CN = "showing";
+const NAME_LS = "user-name";
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -14,7 +16,7 @@ function handleSubmit(event) {
 }
 
 function askName() {
-  question.classList.add(SHOWING_CN);
+  question.classList.remove('hidden');
   input.focus();
   form.addEventListener("submit", handleSubmit);
 }
@@ -25,6 +27,10 @@ function paintName(userName) {
   const time = hour < 12 ? 'morning' : hour < 17 ? 'afternoon' : hour < 22 ? 'evening' : 'night';
   const span = document.createElement('span');
   question.classList.add("hidden");
+  hello.classList.remove("hidden");
+  clock.classList.remove("hidden");
+  toDoForm2.classList.remove("hidden");
+  toDoList2.classList.remove("hidden");
   span.innerText = `Good ${time} ${userName}.`;
   hello.appendChild(span);
 

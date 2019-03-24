@@ -86,7 +86,7 @@ h1 {
   text-align: center;
   background: none;
   border-bottom: 2px solid #fff;
-  width: 100%;
+  width: 50%;
   margin-top: 1rem;
   color: white;
 }
@@ -98,6 +98,7 @@ h1 {
 .weather {
   color: white;
   float: right;
+  padding: 20px;
 }
 .weather .content span:first-child {
   font-size: 35px;
