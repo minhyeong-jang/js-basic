@@ -8,22 +8,43 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <div class="js-clock">
-    <h1>00:00</h1>
+  <div class="center">
+    <div class="question">
+      <span>Hello, what's your name?</span>
+      <form class="js-form form">
+        <input type="text" />
+      </form>
+    </div>
+    <div class="js-clock clock">00:00</div>
+    <div class="js-hello hello"></div>
+    <form class="js-toDoForm toDoForm">
+      <input type="text" placeholder="What a to do" />
+    </form>
+    <ul class="js-toDoList toDoList"></ul>
   </div>
-  <form class="js-form form">
-    <input type="text" placeholder="What is your name?" />
-  </form>
-  <h4 class="js-greetings greetings"></h4>
-  <form class="js-toDoForm">
-    <input type="text" placeholder="What a to do" />
-  </form>
-  <ul class="js-toDoList"></ul>
-  <span class="js-weather"></span>
-  <script src="js/clock.js"></script>
-  <script src="js/gretting.js"></script>
-  <script src="js/todo.js"></script>
+  <div class="js-background background">
+    <div class="cover"></div>
+    <div class="js-image image"></div>
+  </div>
+  <div class="js-weather weather">
+    <div class="js-content content"></div>
+    <div class="js-place place"></div>
+  </div>
+  <div id="tyle-loader">
+    <div></div>
+    <div>
+      <div></div>
+    </div>
+  </div>
+  <script>
+    window.onload = function(){
+      document.getElementById("tyle-loader").classList.add("endLoader");
+    }
+  </script>
   <script src="js/bg.js"></script>
+  <script src="js/getName.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/todo.js"></script>
   <script src="js/weather.js"></script>
 </body>
 </html>
